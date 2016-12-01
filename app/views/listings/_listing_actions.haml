@@ -170,6 +170,7 @@
         %a.icon-with-text-container{href: edit_listing_path(@listing)}
           = icon_tag("edit", ["icon-part"])
           .text-part= t("listings.edit_links.edit_listing")
+        = react_component("ListingEditAvailabilityApp", props: topbar_props, prerender: false)
       .listing-view-admin-link
         %a.icon-with-text-container{href: close_person_listing_path(@current_user, @listing), data: { method: "put", remote: "true"}}
           = icon_tag("lock", ["icon-part"])
